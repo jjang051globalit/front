@@ -1,7 +1,7 @@
 /* position / flex */
 
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100px;
   background-color: rgba(255, 255, 255, 0);
@@ -11,6 +11,7 @@
   top: 300px; */
   transition: all 0.5s ease;
 }
+/* pseudo element */
 .header:after {
   content: "";
   display: block;
@@ -19,6 +20,7 @@
   background-color: #ccc;
   position: absolute;
   top: 100px;
+  /* z-index: -1; */
 }
 
 .header:hover {
@@ -77,8 +79,29 @@
   /* outline: 1px solid #ff0000; */
 }
 
+.list > li .depth01 {
+  position: relative;
+}
+.list > li .depth01:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #f60;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transform: scaleX(0);
+  transition: all 0.25s ease;
+  z-index: 1;
+}
+
 .list > li:hover .depth01 {
   color: #f60;
+  /* border-bottom: 2px solid #f60; */
+}
+.list > li:hover .depth01:after {
+  transform: scaleX(1);
 }
 
 .list .depth02 {
@@ -93,6 +116,19 @@
   padding-bottom: 10px;
   transition: all 0.25s ease;
 }
-.list .depth02 li a:hover {
-  color: #f60;
+
+.popup {
+  position: fixed;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  left: 100px;
+  top: 100px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.popup .content {
+  width: 400px;
+  height: 400px;
+  background-color: #12c9f2;
+  margin-bottom: 10px;
 }
