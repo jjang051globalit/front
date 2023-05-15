@@ -6,51 +6,92 @@
     object-fit: cover;
   }
 }
-
-.business .list {
-  display: flex;
-  color: #111;
-  li {
-    width: 25%;
-    @for $i from 1 through 4 {
-      // 보간(interpolation)
-      &:nth-child(#{$i}) a:before {
-        background-image: url("../images/main/main_business_icon0#{$i}.png");
+.business {
+  padding: 150px 0;
+  .list {
+    display: flex;
+    color: #111;
+    li {
+      width: 25%;
+      position: relative;
+      &:hover {
+        .img-box {
+          transform: translateY(0);
+          opacity: 1;
+        }
       }
-    }
-    // &:nth-child(1) a:before {
-    //   background-image: url("../images/main/main_business_icon01.png");
-    // }
-    // &:nth-child(2) a:before {
-    //   background-image: url("../images/main/main_business_icon02.png");
-    // }
-    // &:nth-child(3) a:before {
-    //   background-image: url("../images/main/main_business_icon03.png");
-    // }
-    // &:nth-child(4) a:before {
-    //   background-image: url("../images/main/main_business_icon04.png");
-    // }
-    a {
-      font-size: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      &:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100px;
-        //background-color: #ccc;
-        background-repeat: no-repeat;
-        background-position: 50% 0;
+      @for $i from 1 through 4 {
+        // 보간(interpolation)
+        &:nth-child(#{$i}) a:before {
+          background-image: url("../images/main/main_business_icon0#{$i}.png");
+        }
       }
-    }
-    .img-box {
-      //display: none;
-      .txt {
+      // &:nth-child(1) a:before {
+      //   background-image: url("../images/main/main_business_icon01.png");
+      // }
+      // &:nth-child(2) a:before {
+      //   background-image: url("../images/main/main_business_icon02.png");
+      // }
+      // &:nth-child(3) a:before {
+      //   background-image: url("../images/main/main_business_icon03.png");
+      // }
+      // &:nth-child(4) a:before {
+      //   background-image: url("../images/main/main_business_icon04.png");
+      // }
+      a {
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //outline: 1px solid #f00;
+        aspect-ratio: 1 / 1.3;
+        &:before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100px;
+          //background-color: #ccc;
+          background-repeat: no-repeat;
+          background-position: 50% 0;
+        }
+      }
+      .img-box {
+        //display: none;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(100px);
         position: absolute;
-        color: #fff;
+        top: 0;
+        transition: all 0.25s ease;
+        .txt {
+          position: absolute;
+          color: #fff;
+          text-align: center;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          line-height: 1.5;
+          h3 {
+            font-size: (24px + 4px);
+            font-weight: 500;
+            // margin: {
+            //   left: 20px;
+            //   top: 20px;
+            // }
+            // font: {
+            //   size: (24px + 4px);
+            //   weight: 500;
+            // }
+            margin-bottom: 20px;
+          }
+        }
+        img {
+          width: 100%;
+        }
       }
     }
   }
