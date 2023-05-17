@@ -18,17 +18,17 @@
   position: absolute;
   top: 100px;
 }
-.header:hover {
+.header.on {
   height: 350px;
   background-color: rgb(255, 255, 255);
 }
-.header:hover .list {
+.header.on .list {
   color: #111;
 }
-.header:hover .logo a .black {
+.header.on .logo a .black {
   opacity: 1;
 }
-.header:hover .logo a .white {
+.header.on .logo a .white {
   opacity: 0;
 }
 .header .logo {
