@@ -77,6 +77,19 @@
   width: 100%;
 }
 
+.master-piece .subject {
+  padding: 150px 0;
+  background-image: url("../images/main/main_master_img01.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+.master-piece .subject .main {
+  font-size: 48px;
+}
+
 .btn {
   width: 150px;
   height: 70px;
