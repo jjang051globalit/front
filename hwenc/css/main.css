@@ -53,6 +53,33 @@
 .main-visual .mask .list li.visual05 .img {
   background-image: url("../images/main/visual05.jpg");
 }
+.main-visual .mask .btns {
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.main-visual .mask .btns .pagination {
+  width: auto;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Noto Sans KR";
+  padding: 0 20px;
+}
+.main-visual .mask .btns button {
+  color: #fff;
+  background-color: #f60;
+  border: none;
+  border-radius: 100px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .business {
   padding-bottom: 30px;

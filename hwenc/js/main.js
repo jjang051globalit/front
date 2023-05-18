@@ -76,6 +76,15 @@ menu.forEach((item, idx) => {
 const mainSwiper = new Swiper(".main-visual .mask", {
   speed: 600,
   loop: true,
+  effect: "fade",
+  navigation: {
+    nextEl: ".main-visual .btns .btn-next",
+    prevEl: ".main-visual .btns .btn-prev",
+  },
+  pagination: {
+    el: ".main-visual .pagination",
+    type: "fraction",
+  },
 });
 
 //prettier-ignore
