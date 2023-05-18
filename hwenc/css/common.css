@@ -36,3 +36,7 @@ p {
 .point-color {
   color: #f60;
 }
+
+.section {
+  padding: 100px 0;
+}

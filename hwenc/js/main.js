@@ -72,5 +72,12 @@ menu.forEach((item, idx) => {
 //     alert(i + "번째 입니다.");
 //   });
 // }
-
-const fruits = ["apple", "melon", "peach"];
+//prettier-ignore
+const swiper = new Swiper(".social .mask", {
+  speed: 600,
+  slidesPerView: 4,
+  spaceBetween: 25,
+  loop: true,
+  loopedSlides: 10,
+  //centeredSlides:true
+});
