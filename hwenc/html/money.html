@@ -13,6 +13,7 @@
     <div class="result"></div>
   </body>
   <script>
+    const moneyArray = [50000, 10000, 5000, 1000, 500, 100, 50, 10];
     const money = document.querySelector("#money");
     const btnCalc = document.querySelector(".btn-calc");
     const result = document.querySelector(".result");
@@ -20,22 +21,31 @@
       let moneyValue = money.value;
 
       234800;
-      const m50000 = Math.floor(moneyValue / 50000);
+      //const m50000 = Math.floor(moneyValue / 50000);
+      result.textContent += `오만원 ${Math.floor(moneyValue / 50000)} 장`;
       moneyValue = moneyValue % 50000;
-      const m10000 = Math.floor(moneyValue / 10000);
+      //const m10000 = Math.floor(moneyValue / 10000);
+      result.textContent += `만원 ${Math.floor(moneyValue / 10000)} 장`;
       moneyValue = moneyValue % 10000;
-      const m5000 = Math.floor(moneyValue / 5000);
+      //const m5000 = Math.floor(moneyValue / 5000);
+      result.textContent += `오천원 ${Math.floor(moneyValue / 5000)} 장`;
       moneyValue = moneyValue % 5000;
-      const m1000 = Math.floor(moneyValue / 1000);
+      //const m1000 = Math.floor(moneyValue / 1000);
+      result.textContent += `천원 ${Math.floor(moneyValue / 1000)} 장`;
       moneyValue = moneyValue % 1000;
-      const m500 = Math.floor(moneyValue / 500);
+      //const m500 = Math.floor(moneyValue / 500);
+      result.textContent += `오백원 ${Math.floor(moneyValue / 500)} 개`;
       moneyValue = moneyValue % 500;
-      const m100 = Math.floor(moneyValue / 100);
+      //const m100 = Math.floor(moneyValue / 100);
+      result.textContent += `백원 ${Math.floor(moneyValue / 100)} 개`;
       moneyValue = moneyValue % 100;
-      const m50 = Math.floor(moneyValue / 50);
-      moneyValue = moneyValue % 50;
+      //const m50 = Math.floor(moneyValue / 50);
+      //moneyValue = moneyValue % 50;
+      result.textContent += `오십원 ${Math.floor(moneyValue / 50)} 개`;
       const m10 = Math.floor(moneyValue / 10);
-      result.textContent = `오만원 ${m50000}장 만원${m10000}장 오천원${m5000}장 천원${m1000}장 오백원${m500}개 백원${m100}개 오십원${m50}개 십원${m10}개`;
+      result.textContent += `십원 ${Math.floor(moneyValue / 10)} 개`;
+
+      // result.textContent = `오만원 ${m50000}장 만원${m10000}장 오천원${m5000}장 천원${m1000}장 오백원${m500}개 백원${m100}개 오십원${m50}개 십원${m10}개`;
     });
   </script>
 </html>
