@@ -257,12 +257,19 @@
   line-height: 1.25;
   margin-top: 20px;
 }
-.social .btns {
+.social .control-box {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
   margin-top: 30px;
 }
-.social .btns button {
+.social .control-box .btns {
+  display: flex;
+  justify-content: end;
+  margin-left: 20px;
+}
+.social .control-box .btns button {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 100px;
@@ -272,6 +279,26 @@
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+}
+.social .control-box .pagination {
+  position: relative;
+  flex-grow: 1;
+}
+.social .control-box .pagination .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #f60;
+}
+
+.more {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  display: flex;
+  align-items: center;
+}
+.more:after {
+  font-family: "Material Icons";
+  content: "\e5cc";
+  display: block;
 }
 
 .btn {

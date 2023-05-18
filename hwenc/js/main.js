@@ -78,6 +78,14 @@ const swiper = new Swiper(".social .mask", {
   slidesPerView: 4,
   spaceBetween: 25,
   loop: true,
-  loopedSlides: 10,
+  //loopedSlides: 10,
+  navigation: {
+    nextEl: ".social .btns .btn-next",
+    prevEl: ".social .btns .btn-prev"
+  },
+  pagination: {
+    el: ".social .pagination .inner",
+    type: "progressbar",
+  },
   //centeredSlides:true
 });

@@ -279,21 +279,48 @@
       }
     }
   }
-  .btns {
+  .control-box {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
     margin-top: 30px;
-    button {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 100px;
-      width: 40px;
-      height: 40px;
+    .btns {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 10px;
+      justify-content: end;
+      margin-left: 20px;
+      button {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+      }
     }
+    .pagination {
+      position: relative;
+      flex-grow: 1;
+      .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+        background-color: $main-color;
+      }
+      //width: 900px;
+    }
+  }
+}
+.more {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  &:after {
+    font-family: "Material Icons";
+    content: "\e5cc";
+    display: block;
   }
 }
 
