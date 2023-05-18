@@ -72,6 +72,12 @@ menu.forEach((item, idx) => {
 //     alert(i + "번째 입니다.");
 //   });
 // }
+
+const mainSwiper = new Swiper(".main-visual .mask", {
+  speed: 600,
+  loop: true,
+});
+
 //prettier-ignore
 const swiper = new Swiper(".social .mask", {
   speed: 600,
