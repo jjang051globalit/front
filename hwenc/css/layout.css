@@ -98,6 +98,49 @@
   transition: all 0.25s ease;
 }
 
+.footer {
+  background-color: #202020;
+  color: #fff;
+  position: relative;
+  padding-bottom: 100px;
+}
+.footer .container .menu {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.footer .container .menu li:nth-child(1) a {
+  padding-left: 0;
+}
+.footer .container .menu li a {
+  padding: 20px;
+  display: block;
+}
+.footer .container address {
+  padding-top: 20px;
+  color: rgba(255, 255, 255, 0.25);
+}
+.footer .container address .copyright {
+  margin-top: 30px;
+}
+.footer .info-box {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.25);
+}
+.footer .info-box .tel {
+  display: flex;
+}
+.footer .info-box .tel dl {
+  display: flex;
+  margin-left: 50px;
+}
+.footer .info-box .tel dl dd {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 10px;
+}
+
 .popup {
   display: none;
   position: fixed;
