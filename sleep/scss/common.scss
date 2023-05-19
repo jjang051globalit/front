@@ -1,0 +1,37 @@
+@import "vars";
+body {
+  font-size: 16px;
+  color: #111;
+  font-family: "Raleway", "Noto Sans KR", "돋움";
+  font-weight: 400;
+  min-height: 4000px;
+  /* 몇 몇 태그들은 부모의 속성을 물려받지 않는 것들도 있다. */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+strong {
+  font-weight: 700;
+  /* 100/300/400/500/700/900 */
+}
+p {
+  line-height: 1.5;
+}
+.point-color {
+  color: $main-color;
+}
+.section {
+  padding: 100px 0;
+}
