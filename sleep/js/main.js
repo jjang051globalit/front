@@ -8,3 +8,10 @@ gnbList.forEach((item, idx) => {
 header.addEventListener("mouseleave", () => {
   header.classList.remove("on");
 });
+
+new Swiper(".media .mask", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+});
