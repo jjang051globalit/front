@@ -4,6 +4,7 @@
   justify-content: space-between;
   color: #fff;
   width: 100%;
+  transition: all 0.5s ease;
 }
 .header .logo {
   height: 80px;
@@ -14,6 +15,7 @@
   top: 20px;
   position: absolute;
   opacity: 0;
+  transition: all 0.5s ease;
 }
 .header .logo img.white {
   opacity: 1;
@@ -21,6 +23,7 @@
 .header.on {
   color: #111;
   background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 .header.on .logo img.white {
   opacity: 0;

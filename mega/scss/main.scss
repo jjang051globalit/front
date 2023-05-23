@@ -6,4 +6,18 @@
     //height: 100vh;
     //object-fit: cover; //img,video
   }
+  .slogan {
+    position: absolute;
+    color: #fff;
+    font-size: $h1 * 1.25;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    line-height: 1.5;
+    font-weight: 700;
+    .word {
+      overflow: hidden;
+    }
+  }
 }

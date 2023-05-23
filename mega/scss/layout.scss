@@ -6,6 +6,7 @@
   justify-content: space-between;
   color: #fff;
   width: 100%;
+  transition: all 0.5s ease;
   .logo {
     height: 80px;
     padding: 0 50px;
@@ -14,6 +15,7 @@
       top: 20px;
       position: absolute;
       opacity: 0;
+      transition: all 0.5s ease;
       &.white {
         opacity: 1;
       }
@@ -22,6 +24,7 @@
   &.on {
     color: #111;
     background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     .logo {
       img {
         &.white {
