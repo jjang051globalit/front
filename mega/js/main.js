@@ -1,17 +1,3 @@
-const gnbList = document.querySelectorAll(".gnb .list > li");
 const header = document.querySelector(".header");
-gnbList.forEach((item, idx) => {
-  item.addEventListener("mouseenter", () => {
-    header.classList.add("on");
-  });
-});
-header.addEventListener("mouseleave", () => {
-  header.classList.remove("on");
-});
-
-new Swiper(".media .mask", {
-  slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 20,
-  loop: true,
-});
+//header.classList.add("on");
+// 사용자가 scroll을 해서 스크롤의 높이가 0보다 커지면 on을 단다.
