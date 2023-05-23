@@ -21,3 +21,105 @@
     }
   }
 }
+.banner {
+  padding: 150px 0;
+  overflow-x: hidden;
+  .mask {
+    margin-top: 120px;
+    position: relative;
+    //border: 1px solid #f00;
+    .list {
+      li {
+        width: 1160px;
+        p {
+          margin-top: 30px;
+          font-size: $h3;
+          .category {
+            padding: 10px 20px;
+            background-color: #111;
+            color: #fff;
+          }
+        }
+      }
+    }
+    button {
+      position: absolute;
+      background: none;
+      top: 40%;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      width: 60px;
+      height: 60px;
+      z-index: 2;
+      cursor: pointer;
+      .material-icons {
+        font-size: 48px;
+        color: #fff;
+      }
+      &.btn-next {
+        right: 270px; // 1430 - 1160
+      }
+    }
+    .pagination {
+      margin-top: 50px;
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        border: 3px solid $main-color;
+        background: none;
+        border-radius: 100px;
+        transition: all 0.25s ease;
+        &-active {
+          width: 50px;
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}
+.partner {
+  padding: 150px 0;
+  background-color: $bg-color;
+  overflow-x: hidden;
+  .brand {
+    margin-top: 50px;
+    ul {
+      //display: flex;
+      //animation: brand-motion 10s linear infinite;
+      transition-timing-function: linear;
+      li {
+        //padding: 20px 40px;
+        width: auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+.title-box {
+  h2 {
+    font-size: $h1;
+    line-height: 1.25;
+    .mini {
+      color: $main-color;
+      display: block;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  p {
+    font-size: $h3;
+  }
+}
+
+// @keyframes brand-motion {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-50%);
+//   }
+// }

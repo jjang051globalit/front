@@ -16,3 +16,91 @@
 .main-visual .slogan .word {
   overflow: hidden;
 }
+
+.banner {
+  padding: 150px 0;
+  overflow-x: hidden;
+}
+.banner .mask {
+  margin-top: 120px;
+  position: relative;
+}
+.banner .mask .list li {
+  width: 1160px;
+}
+.banner .mask .list li p {
+  margin-top: 30px;
+  font-size: 24px;
+}
+.banner .mask .list li p .category {
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff;
+}
+.banner .mask button {
+  position: absolute;
+  background: none;
+  top: 40%;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  cursor: pointer;
+}
+.banner .mask button .material-icons {
+  font-size: 48px;
+  color: #fff;
+}
+.banner .mask button.btn-next {
+  right: 270px;
+}
+.banner .mask .pagination {
+  margin-top: 50px;
+}
+.banner .mask .pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  border: 3px solid #0b7bff;
+  background: none;
+  border-radius: 100px;
+  transition: all 0.25s ease;
+}
+.banner .mask .pagination .swiper-pagination-bullet-active {
+  width: 50px;
+  background-color: #0b7bff;
+}
+
+.partner {
+  padding: 150px 0;
+  background-color: #f7f8f9;
+  overflow-x: hidden;
+}
+.partner .brand {
+  margin-top: 50px;
+}
+.partner .brand ul {
+  transition-timing-function: linear;
+}
+.partner .brand ul li {
+  width: auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-box h2 {
+  font-size: 48px;
+  line-height: 1.25;
+}
+.title-box h2 .mini {
+  color: #0b7bff;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.title-box p {
+  font-size: 24px;
+}

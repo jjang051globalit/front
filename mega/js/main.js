@@ -15,3 +15,27 @@ window.addEventListener("scroll", () => {
 });
 
 gsap.from(".main-visual .slogan .char", { y: 100, opacity: 0, ease: "power3", duration: 1, delay: 1, stagger: 0.02 });
+
+new Swiper(".banner .mask", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    prevEl: ".banner .mask .btn-prev",
+    nextEl: ".banner .mask .btn-next",
+  },
+  pagination: {
+    el: ".banner .mask .pagination",
+    clickable: true,
+  },
+});
+new Swiper(".partner .brand", {
+  slidesPerView: "auto",
+  speed: 1000,
+  loop: true,
+  loopedSlides: 5,
+  autoplay: {
+    delay: 10,
+    disableOnInteraction: false,
+  },
+});

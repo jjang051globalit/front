@@ -77,6 +77,9 @@ const mainSwiper = new Swiper(".main-visual .mask", {
   speed: 600,
   loop: true,
   effect: "fade",
+  autoplay: {
+    delay: 3000,
+  },
   navigation: {
     nextEl: ".main-visual .btns .btn-next",
     prevEl: ".main-visual .btns .btn-prev",
