@@ -91,6 +91,131 @@
   align-items: center;
 }
 
+.effect {
+  padding: 150px 0;
+  position: relative;
+  color: #fff;
+}
+.effect .panel ul {
+  display: flex;
+  justify-content: space-between;
+}
+.effect .panel ul li {
+  width: 24%;
+}
+.effect .panel ul li a:hover img {
+  transform: scale(1.25);
+}
+.effect .panel ul li .img-box {
+  overflow: hidden;
+}
+.effect .panel ul li img {
+  width: 100%;
+  vertical-align: top;
+  transition: all 0.25s ease;
+  aspect-ratio: 1/1.5;
+}
+.effect .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  aspect-ratio: 1/0.5625;
+  z-index: -1;
+}
+
+.news {
+  padding: 150px 0;
+}
+.news .title-box {
+  display: flex;
+  align-items: end;
+}
+.news .title-box h2 {
+  margin-bottom: 0;
+}
+.news .title-box .detail {
+  margin-left: 50px;
+  font-size: 20px;
+}
+.news .panel {
+  margin-top: 50px;
+}
+.news .panel ul {
+  display: flex;
+  gap: 0 20px;
+}
+.news .panel ul li {
+  width: 33.33%;
+}
+.news .panel ul li .img-box img {
+  width: 100%;
+}
+.news .panel ul li .txt-box h3 {
+  margin: 20px 0 30px;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news .panel ul li .txt-box p {
+  line-height: 1.5;
+  height: 4.5em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.recruit {
+  color: #fff;
+  padding: 150px 0;
+  background-image: url("../images/main/background.png");
+}
+.recruit .txt-box {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.recruit .txt-box .rolling {
+  width: 450px;
+  height: 120px;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  color: #0b7bff;
+  position: relative;
+}
+.recruit .txt-box .rolling:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+}
+.recruit .more {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #0b7bff;
+  text-shadow: 1px 1px 0px #0057be,2px 2px 0px #0057be,3px 3px 0px #0057be,4px 4px 0px #0057be,5px 5px 0px #0057be,6px 6px 0px #0057be,7px 7px 0px #0057be,8px 8px 0px #0057be,9px 9px 0px #0057be,10px 10px 0px #0057be,11px 11px 0px #0057be,12px 12px 0px #0057be,13px 13px 0px #0057be,14px 14px 0px #0057be,15px 15px 0px #0057be,16px 16px 0px #0057be,17px 17px 0px #0057be,18px 18px 0px #0057be,19px 19px 0px #0057be,20px 20px 0px #0057be,21px 21px 0px #0057be,22px 22px 0px #0057be,23px 23px 0px #0057be,24px 24px 0px #0057be,25px 25px 0px #0057be,26px 26px 0px #0057be,27px 27px 0px #0057be,28px 28px 0px #0057be,29px 29px 0px #0057be,30px 30px 0px #0057be,31px 31px 0px #0057be,32px 32px 0px #0057be,33px 33px 0px #0057be,34px 34px 0px #0057be,35px 35px 0px #0057be,36px 36px 0px #0057be,37px 37px 0px #0057be,38px 38px 0px #0057be,39px 39px 0px #0057be,40px 40px 0px #0057be;
+  overflow: hidden;
+}
+
+.vertical {
+  padding-bottom: 300px;
+}
+.vertical img {
+  border: 1px solid #f00;
+}
+
 .title-box h2 {
   font-size: 48px;
   line-height: 1.25;
@@ -103,4 +228,9 @@
 }
 .title-box p {
   font-size: 24px;
+}
+.title-box .detail .material-icons {
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-bottom: 6px;
 }
