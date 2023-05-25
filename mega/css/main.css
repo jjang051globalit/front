@@ -196,7 +196,8 @@
   position: absolute;
   bottom: 0px;
 }
-.recruit .more {
+
+.more {
   width: 200px;
   height: 60px;
   display: flex;

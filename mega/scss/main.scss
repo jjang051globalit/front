@@ -217,20 +217,19 @@
       }
     }
   }
-  .more {
-    width: 200px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: $h4;
-    font-weight: 700;
-    background-color: $main-color;
-    @include longShadow(40, darken($main-color, 15));
-    overflow: hidden;
-  }
 }
-
+.more {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $h4;
+  font-weight: 700;
+  background-color: $main-color;
+  @include longShadow(40, darken($main-color, 15));
+  overflow: hidden;
+}
 .vertical {
   padding-bottom: 300px;
   img {
