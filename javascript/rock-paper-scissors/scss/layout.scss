@@ -1,0 +1,55 @@
+body {
+  background-color: #333;
+}
+.header {
+  background-color: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.computer {
+  margin: 100px 0;
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+}
+.human {
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      img {
+        width: 80px;
+      }
+    }
+  }
+}
+.result {
+  margin-top: 50px;
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    li {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      &.win {
+        background-color: #0091c6;
+      }
+      &.draw {
+        background-color: #a9a9a9;
+      }
+      &.lose {
+        background-color: #e60000;
+      }
+      //background-color: #fff;
+    }
+  }
+}
