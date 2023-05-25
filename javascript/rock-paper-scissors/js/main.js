@@ -17,9 +17,22 @@ const makeRandom = () => {
   computerList[computerChoice].style.display = "block";
 };
 //console.log(10 === "10");
+// 5번 할 수 있게....
+//
+let i = 0;
+let gameIdx = 0;
 humanList.forEach((item, idx) => {
   item.addEventListener("click", () => {
+    i++;
     clearInterval(computerIdx);
+    if (i >= 3) {
+      clearTimeout(gameIdx);
+    } else {
+      gameIdx = setTimeout(() => {
+        computerIdx = setInterval(makeRandom, 50);
+      }, 1000);
+    }
+
     if (idx === computerChoice) {
       //console.log("draw");
       appendItems("draw");
@@ -34,6 +47,5 @@ humanList.forEach((item, idx) => {
     }
   });
 });
-
-const computerIdx = setInterval(makeRandom, 50); // clearInterval
+let computerIdx = setInterval(makeRandom, 50); // clearInterval
 makeRandom();

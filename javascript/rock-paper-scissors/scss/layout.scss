@@ -19,6 +19,7 @@ body {
   ul {
     display: flex;
     justify-content: center;
+    gap: 10px;
     li {
       img {
         width: 80px;
@@ -51,5 +52,18 @@ body {
       }
       //background-color: #fff;
     }
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  p {
+    background-color: #fff;
+    color: #111;
+    padding: 10px 30px;
+    border-radius: 100px;
   }
 }

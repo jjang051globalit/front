@@ -21,6 +21,7 @@ body {
 .human ul {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 .human ul li img {
   width: 80px;
@@ -51,4 +52,18 @@ body {
 }
 .result ul li.lose {
   background-color: #e60000;
+}
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.footer p {
+  background-color: #fff;
+  color: #111;
+  padding: 10px 30px;
+  border-radius: 100px;
 }
