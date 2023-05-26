@@ -37,14 +37,24 @@ word.addEventListener("keyup", (e) => {
       fault();
       return;
     }
-    appedWord(word.value);
-    word.value = "";
+    fetch(`https://opendict.korean.go.kr/api/search?key=9A816277AA70D1F8EC1ADC87D52CA5E2&q=${word.value}&req_type=json`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.channel.total <= 0) {
+          fault();
+          word.value = "";
+        } else {
+          appedWord(word.value);
+          word.value = "";
+        }
+      });
   }
 });
-fetch("https://opendict.korean.go.kr/api/search?key=9A816277AA70D1F8EC1ADC87D52CA5E2&q=기럭키&req_type=json")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  });
+
+const checkDic = async (question) => {
+  fetch(`https://opendict.korean.go.kr/api/search?key=9A816277AA70D1F8EC1ADC87D52CA5E2&q=${question}&req_type=json`)
+    .then((response) => response.json())
+    .then((data) => {
+      return data.channel.total;
+    });
+};
