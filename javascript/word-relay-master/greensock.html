@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WORD-RELAY</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/greensock/gsap.min.js"></script>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+  <script>
+    // x transform:translateX()
+    gsap.to(".box", { x: 500, backgroundColor: "#00f", duration: 1, ease: "elastic" });
+  </script>
+</html>
