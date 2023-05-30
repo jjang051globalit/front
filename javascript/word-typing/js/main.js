@@ -29,7 +29,8 @@ word.addEventListener("keyup", (e) => {
     }
     const lastWord = document.querySelector(".word-list ul li:last-child").textContent;
     const lastChar = lastWord.substring(2);
-    if (word.value.substring(0, 1) !== lastChar) {
+
+    if (word.value.substring(0, 1) !== HanTools.dueum(lastChar)) {
       fault();
       return;
     }
