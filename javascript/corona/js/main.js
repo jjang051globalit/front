@@ -1,67 +1,32 @@
-//ajax (asynchronous javascript and xml)
-const thumbsList = document.querySelector(".thumbs-box ul");
-
-const search = document.querySelector(".search");
-search.addEventListener("keyup", (e) => {
-  if (e.key === "Enter" || e.keyCode === 13) {
-    const searchWord = search.value; //전지현
-    searchImg(searchWord);
-  }
-});
-
-//promise   홍대역 8번출구 맥도널드() fullfield / rejected
-/*
-const searchImg = (searchWord) => {
-  const aa = fetch(`https://dapi.kakao.com/v2/search/image?query=${searchWord}`, {
-    headers: {
-      Authorization: "KakaoAK 8a0584e2ec2cc7627ecb66e8d623dd86",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      const imgList = data.documents;
-      imgList.forEach(function (item, idx) {
-        const li = document.createElement("li");
-        const img = document.createElement("img");
-        img.src = item.thumbnail_url;
-        li.append(img);
-        thumbsList.append(li);
-      });
-    });
-};
-*/
-
-const removeItem = () => {
-  const imgItem = document.querySelectorAll(".thumbs-box ul li");
-  imgItem.forEach((item, idx) => {
-    item.remove();
-  });
-};
-
-const searchImg = async (searchWord) => {
-  // 기존 이미지 없애기... li 태그 없애기... remove();
-  removeItem();
-  const imgResponse = await fetch(`https://dapi.kakao.com/v2/search/vclip?query=${searchWord}&size=30`, {
-    headers: {
-      Authorization: "KakaoAK 8a0584e2ec2cc7627ecb66e8d623dd86",
-    },
-  });
-  const imgJson = await imgResponse.json();
-  const imgList = imgJson.documents;
-  imgList.forEach(function (item, idx) {
+const coronaList = document.querySelector(".coronaList ul");
+const loadCoronaData = async (date) => {
+  const corona = await fetch(
+    `http://apis.data.go.kr/1352000/ODMS_COVID_04/callCovid04Api?serviceKey=Wnus4QpirWGI56CfvzMWDIDHMRL%2FmEF%2FqTl9gwVNbRggLYTGPFIdwBy0L51B%2B27d5QRbLanNmIAxPwNvl7dKPA%3D%3D&pageNo=1&numOfRows=500&apiType=JSON&std_day=${date}`
+  );
+  const response = await corona.json();
+  //.then((response) => response.json())
+  const items = response.items;
+  items.forEach((item, idx) => {
+    console.log(item.gubun + "===" + item.incDec);
     const li = document.createElement("li");
-    const img = document.createElement("img");
-    const a = document.createElement("a");
-    img.src = item.thumbnail;
-    a.href = item.url;
-    a.setAttribute("data-fancybox", "gallery");
-    a.append(img);
-    li.append(a);
-    thumbsList.append(li);
-  });
-  gsap.from(".thumbsList li", { scale: 0, duration: 1, stagger: 0.02 });
-  Fancybox.bind("[data-fancybox]", {
-    // Your options go here
+    const region = document.createElement("span");
+    region.classList.add("region");
+    const incDec = document.createElement("span");
+    incDec.classList.add("incDec");
+    region.textContent = item.gubun;
+    incDec.textContent = item.incDec;
+    li.append(region);
+    li.append(incDec);
+    coronaList.append(li);
   });
 };
+const datePicker = new Lightpick({
+  field: document.querySelector(".date-picker"),
+  format: "YYYY-MM-DD",
+  onSelect: function (date) {
+    //console.log(date.format("YYYY-MM-DD"));
+    loadCoronaData(date.format("YYYY-MM-DD"));
+  },
+});
+datePicker.setDate(new Date());
+//loadCoronaData("2023-05-30");
