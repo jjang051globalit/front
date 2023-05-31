@@ -17,20 +17,13 @@ const loadCoronaData = async (date) => {
   const items = response.items;
   ldsEllipsis.classList.add("off");
   const sortedItems = _.sortBy(items, ["gubun"]); //원본을 훼손하지 않는 methos
+  const cities = [];
+  const values = [];
   sortedItems.forEach((item, idx) => {
-    console.log(item.gubun + "===" + item.incDec);
-    const li = document.createElement("li");
-    const region = document.createElement("span");
-    region.classList.add("region");
-    const incDec = document.createElement("span");
-    incDec.classList.add("incDec");
-    region.textContent = item.gubun;
-    incDec.textContent = item.incDec;
-    li.append(region);
-    li.append(incDec);
-    coronaList.append(li);
+    cities.push(item.gubun);
+    values.push(item.incDec);
   });
-  gsap.from(".coronaList ul li", { scale: 0, duration: 0.5, stagger: 0.02 });
+  makeChart(cities, values);
 };
 const datePicker = new Lightpick({
   field: document.querySelector(".date-picker"),
@@ -41,25 +34,29 @@ const datePicker = new Lightpick({
   },
 });
 datePicker.setDate(new Date());
-const ctx = document.querySelector(".chart");
-
-new Chart(ctx, {
-  type: "bar",
-  data: {
-    labels: ["대구", "인천", "서울", "경기", "세종", "제주"],
-    datasets: [
-      {
-        label: "# of Votes",
-        data: [300, 250, 800, 1200, 150, 80],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
+let myChart = null;
+const makeChart = (cities, values) => {
+  const ctx = document.querySelector(".chart");
+  if (myChart !== null) myChart.destroy();
+  myChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: cities,
+      datasets: [
+        {
+          label: "시도별 확진자수",
+          data: values,
+          borderWidth: 1,
+          //backgroundColor: ["#9BD0F5", "#ff00cc", "#ccff33"],
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
       },
     },
-  },
-});
+  });
+};
