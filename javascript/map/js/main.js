@@ -6,10 +6,11 @@ const options = {
 };
 const map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 const geocoder = new kakao.maps.services.Geocoder();
-geocoder.addressSearch("서울시 관악구 남부순환로 1820 에그옐로우빌딩 14층", function (result, status) {
+geocoder.addressSearch("서울특별시 중구 세종대로 110", function (result, status) {
   // 정상적으로 검색이 완료됐으면
   if (status === kakao.maps.services.Status.OK) {
     const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+    console.log(coords);
 
     /*
     // 결과값으로 받은 위치를 마커로 표시합니다
